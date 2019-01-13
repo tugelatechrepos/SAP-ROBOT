@@ -1,0 +1,5 @@
+:::Jar already downloaded, launching jetty server...:::
+:::Starting jetty server...:::
+:::Making Request to Service: http://localhost:8080/sikuli/api/doubleclick POST: {"jPattern":{"imagePath":"C:\\Users\\user\\source\\repos\\RobotSAPAutomationWindowsServiceHost\\SAPAutomationTests\\bin\\Debug\\SAPLogon.PNG","offset_x":0,"offset_y":0,"similar":0.7},"jKeyModifier":"NONE"}:::
+:::{"result":"PASS","message":"Pattern DoubleClicked"}:::
+:::Result: PASS Message: Pattern DoubleClicked Stacktrace: :::

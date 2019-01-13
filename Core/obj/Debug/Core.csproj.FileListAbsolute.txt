@@ -1,0 +1,6 @@
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Core\bin\Debug\Core.dll
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Core\bin\Debug\Core.pdb
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Core\obj\Debug\Core.dll
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Core\obj\Debug\Core.pdb

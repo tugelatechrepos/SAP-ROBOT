@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotSAPAutomationWindowsServiceHost", "RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost.csproj", "{FE1D636A-A141-45BF-BDAB-4F45C4403B47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPAutomationJob", "SAPAutomationJob\SAPAutomationJob.csproj", "{D20E8BAD-B206-43BC-AE51-3E5248EBEEE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPAutomationTests", "SAPAutomationTests\SAPAutomationTests.csproj", "{96A21C4A-1708-4E25-9888-96863066769E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE1D636A-A141-45BF-BDAB-4F45C4403B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE1D636A-A141-45BF-BDAB-4F45C4403B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE1D636A-A141-45BF-BDAB-4F45C4403B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE1D636A-A141-45BF-BDAB-4F45C4403B47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D20E8BAD-B206-43BC-AE51-3E5248EBEEE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20E8BAD-B206-43BC-AE51-3E5248EBEEE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20E8BAD-B206-43BC-AE51-3E5248EBEEE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20E8BAD-B206-43BC-AE51-3E5248EBEEE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96A21C4A-1708-4E25-9888-96863066769E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96A21C4A-1708-4E25-9888-96863066769E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96A21C4A-1708-4E25-9888-96863066769E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96A21C4A-1708-4E25-9888-96863066769E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34AA6490-00B3-4EAF-B53C-327D76B16634}
+	EndGlobalSection
+EndGlobal

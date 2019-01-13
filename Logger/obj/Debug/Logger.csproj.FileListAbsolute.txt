@@ -1,0 +1,12 @@
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Logger\bin\Debug\NLog.config
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Logger\bin\Debug\Logger.dll
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Logger\bin\Debug\Logger.pdb
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Logger\bin\Debug\MefContrib.dll
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Logger\bin\Debug\NLog.dll
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Logger\bin\Debug\MefContrib.pdb
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Logger\bin\Debug\MefContrib.xml
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Logger\bin\Debug\NLog.xml
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Logger\obj\Debug\Logger.csproj.CoreCompileInputs.cache
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Logger\obj\Debug\Logger.dll
+E:\VS2017Projects\RobotSAPAutomationWindowsServiceHost\Logger\obj\Debug\Logger.pdb

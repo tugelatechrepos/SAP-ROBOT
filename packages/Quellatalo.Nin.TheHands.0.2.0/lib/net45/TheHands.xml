@@ -1,0 +1,699 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TheHands</name>
+    </assembly>
+    <members>
+        <member name="T:Quellatalo.Nin.TheHands.KeyboardHandler">
+            <summary>
+            Make windows keyboard actions.
+            </summary>
+        </member>
+        <member name="P:Quellatalo.Nin.TheHands.KeyboardHandler.DefaultKeyboardActionDelay">
+            <summary>
+            Default delay (milliseconds) after a keyboard action.
+            </summary>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.KeyboardHandler.IsExtendedKey(System.Windows.Forms.Keys)">
+            <remarks>
+            The extended keys consist of the ALT and CTRL keys on the right-hand side of the keyboard; the INS, DEL, HOME, END, PAGE UP, PAGE DOWN, and arrow keys in the clusters to the left of the numeric keypad; the NUM LOCK key; the BREAK (CTRL+PAUSE) key; the PRINT SCRN key; and the divide (/) and ENTER keys in the numeric keypad.
+            
+            See http://msdn.microsoft.com/en-us/library/ms646267(v=vs.85).aspx Section "Extended-Key Flag"
+            </remarks>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.KeyboardHandler.IsExtendedKey(System.UInt16)">
+            <summary>
+            According to http://inputsimulator.codeplex.com, this need to be checked for character input
+            </summary>
+            <param name="wScan"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.KeyboardHandler.InputType.Mouse">
+            <summary>
+            INPUT_MOUSE = 0x00 (The event is a mouse event. Use the mi structure of the union.)
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.KeyboardHandler.InputType.Keyboard">
+            <summary>
+            INPUT_KEYBOARD = 0x01 (The event is a keyboard event. Use the ki structure of the union.)
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.KeyboardHandler.InputType.Hardware">
+            <summary>
+            INPUT_HARDWARE = 0x02 (Windows 95/98/Me: The event is from input hardware other than a keyboard or mouse. Use the hi structure of the union.)
+            </summary>
+        </member>
+        <member name="T:Quellatalo.Nin.TheHands.KeyboardHandler.KeyboardEventFlags">
+             <summary>
+             https://msdn.microsoft.com/en-us/library/windows/desktop/ms646271(v=vs.85).aspx
+             Remarks
+            
+             INPUT_KEYBOARD supports nonkeyboard-input methods—such as handwriting recognition or voice recognition—as if it were text input by using the KEYEVENTF_UNICODE flag.
+             If KEYEVENTF_UNICODE is specified, SendInput sends a WM_KEYDOWN or WM_KEYUP message to the foreground thread's message queue with wParam equal to VK_PACKET.
+             Once GetMessage or PeekMessage obtains this message, passing the message to TranslateMessage posts a WM_CHAR message with the Unicode character originally specified by wScan.
+             This Unicode character will automatically be converted to the appropriate ANSI value if it is posted to an ANSI window.
+             Sets the KEYEVENTF_SCANCODE flag to define keyboard input in terms of the scan code.This is useful to simulate a physical keystroke regardless of which keyboard is currently being used.The virtual key value of a key may alter depending on the current keyboard layout or what other keys were pressed, but the scan code will always be the same.
+             </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.KeyboardHandler.KeyboardEventFlags.KEYEVENTF_EXTENDEDKEY">
+            <summary>
+            If specified, the scan code was preceded by a prefix byte that has the value 0xE0 (224).
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.KeyboardHandler.KeyboardEventFlags.KEYEVENTF_KEYUP">
+            <summary>
+            If specified, the key is being released.
+            If not specified, the key is being pressed.
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.KeyboardHandler.KeyboardEventFlags.KEYEVENTF_UNICODE">
+            <summary>
+            If specified, the system synthesizes a VK_PACKET keystroke.
+            The wVk parameter must be zero.
+            This flag can only be combined with the KEYEVENTF_KEYUP flag.
+            For more information, see the Remarks section.
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.KeyboardHandler.KeyboardEventFlags.KEYEVENTF_SCANCODE">
+            <summary>
+            If specified, wScan identifies the key and wVk is ignored.
+            </summary>            
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.KeyboardHandler.KeyUp(System.Windows.Forms.Keys)">
+            <summary>
+            Releases a specified key.
+            </summary>
+            <param name="keyCode">The key to be released.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.KeyboardHandler.characterUp(System.Char)">
+            <summary>
+            Releases a specified key.
+            </summary>
+            <param name="character">The key to be released.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.KeyboardHandler.KeyDown(System.Windows.Forms.Keys)">
+            <summary>
+            Presses a specified key.
+            </summary>
+            <param name="keyCode">The key to be pressed.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.KeyboardHandler.characterDown(System.Char)">
+            <summary>
+            Presses a specified key.
+            </summary>
+            <param name="character">The key to be pressed.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.KeyboardHandler.KeyTyping(System.Windows.Forms.Keys)">
+            <summary>
+            Types a specified key.
+            </summary>
+            <param name="key">The key to be typed.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.KeyboardHandler.CharacterInput(System.Char)">
+            <summary>
+            Types a specified key.
+            </summary>
+            <param name="character">The key to be typed.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.KeyboardHandler.StringInput(System.String)">
+            <summary>
+            Types a text.
+            </summary>
+            <param name="text">The text to be typed.</param>
+        </member>
+        <member name="T:Quellatalo.Nin.TheHands.MouseHandler">
+            <summary>
+            Make windows mouse actions.
+            </summary>
+        </member>
+        <member name="P:Quellatalo.Nin.TheHands.MouseHandler.DefaultMouseActionDelay">
+            <summary>
+            Default delay (milliseconds) after a mouse action.
+            </summary>
+        </member>
+        <member name="P:Quellatalo.Nin.TheHands.MouseHandler.DefaultOffsetBound">
+            <summary>
+            Default offset bound.
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.MouseHandler.MouseEventFlags.MOUSEEVENTF_MOVE">
+            <summary>
+            Movement occurred.
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.MouseHandler.MouseEventFlags.MOUSEEVENTF_MOVE_NOCOALESCE">
+            <summary>
+            The WM_MOUSEMOVE messages will not be coalesced.
+            The default behavior is to coalesce WM_MOUSEMOVE messages.
+            Windows XP/2000:  This value is not supported.
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.MouseHandler.MouseEventFlags.MOUSEEVENTF_LEFTDOWN">
+            <summary>
+            The left button was pressed.
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.MouseHandler.MouseEventFlags.MOUSEEVENTF_LEFTUP">
+            <summary>
+            The left button was released.
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.MouseHandler.MouseEventFlags.MOUSEEVENTF_RIGHTDOWN">
+            <summary>
+            The right button was pressed.
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.MouseHandler.MouseEventFlags.MOUSEEVENTF_RIGHTUP">
+            <summary>
+            The right button was released.
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.MouseHandler.MouseEventFlags.MOUSEEVENTF_MIDDLEDOWN">
+            <summary>
+            The middle button was pressed.
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.MouseHandler.MouseEventFlags.MOUSEEVENTF_MIDDLEUP">
+            <summary>
+            The middle button was released.
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.MouseHandler.MouseEventFlags.MOUSEEVENTF_VIRTUALDESK">
+            <summary>
+            Maps coordinates to the entire desktop. Must be used with MOUSEEVENTF_ABSOLUTE.
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.MouseHandler.MouseEventFlags.MOUSEEVENTF_XDOWN">
+            <summary>
+            An X button was pressed.
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.MouseHandler.MouseEventFlags.MOUSEEVENTF_XUP">
+            <summary>
+            An X button was released.
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.MouseHandler.MouseEventFlags.MOUSEEVENTF_WHEEL">
+            <summary>
+            The wheel was moved, if the mouse has a wheel. The amount of movement is specified in mouseData.
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.MouseHandler.MouseEventFlags.MOUSEEVENTF_HWHEEL">
+            <summary>
+            The wheel was moved horizontally, if the mouse has a wheel.
+            The amount of movement is specified in mouseData.
+            Windows XP/2000:  This value is not supported.
+            </summary>
+        </member>
+        <member name="F:Quellatalo.Nin.TheHands.MouseHandler.MouseEventFlags.MOUSEEVENTF_ABSOLUTE">
+            <summary>
+            The dx and dy members contain normalized absolute coordinates.
+            If the flag is not set, dxand dy contain relative data (the change in position since the last reported position).
+            This flag can be set, or not set, regardless of what kind of mouse or other pointing device, if any, is connected to the system.
+            For further information about relative mouse motion, see the following Remarks section.
+            </summary>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.GetPosition">
+            <summary>
+            Gets current mouse point.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDown">
+            <summary>
+            Press left mouse button.
+            </summary>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftUp">
+            <summary>
+            Release left mouse button.
+            </summary>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDown">
+            <summary>
+            Press right mouse button.
+            </summary>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightUp">
+            <summary>
+            Release right mouse button.
+            </summary>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.Move(System.Int32,System.Int32)">
+            <summary>
+            Move mouse.
+            </summary>
+            <param name="x">Move x.</param>
+            <param name="y">Move y</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.Move(System.Drawing.Point)">
+            <summary>
+            Move mouse based on point value.
+            </summary>
+            <param name="point">Move value.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.MoveTo(System.Int32,System.Int32)">
+            <summary>
+            Move mouse to a specified point.
+            </summary>
+            <param name="x">Target x.</param>
+            <param name="y">Target y.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.MoveTo(System.Drawing.Point)">
+            <summary>
+            Move mouse to a specified point.
+            </summary>
+            <param name="mousePoint">Target.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.Click">
+            <summary>
+            Mouse left click.
+            </summary>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.Click(System.Int32,System.Int32)">
+            <summary>
+            Mouse left click at a specified point.
+            </summary>
+            <param name="x">Target x.</param>
+            <param name="y">Target y.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.Click(System.Drawing.Point)">
+            <summary>
+            Mouse left click at a point.
+            </summary>
+            <param name="point">Target.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightClick">
+            <summary>
+            Mouse right click.
+            </summary>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightClick(System.Int32,System.Int32)">
+            <summary>
+            Mouse right click at a point.
+            </summary>
+            <param name="x">Target x.</param>
+            <param name="y">Target y.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightClick(System.Drawing.Point)">
+            <summary>
+            Right click at a point.
+            </summary>
+            <param name="point">Target.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDragTo(System.Int32,System.Int32)">
+            <summary>
+            Left mouse button drag to a point.
+            </summary>
+            <param name="x">Target x.</param>
+            <param name="y">Target y.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDragTo(System.Drawing.Point)">
+            <summary>
+            Left mouse button dra to a point.
+            </summary>
+            <param name="point">Target.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDrag(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Left mouse button drag.
+            </summary>
+            <param name="fromX">From x.</param>
+            <param name="fromY">From y.</param>
+            <param name="toX">To x.</param>
+            <param name="toY">To y.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDrag(System.Int32,System.Int32,System.Drawing.Point)">
+            <summary>
+            Left mouse button drag.
+            </summary>
+            <param name="fromX">From x.</param>
+            <param name="fromY">From y.</param>
+            <param name="to">To point.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDrag(System.Drawing.Point,System.Int32,System.Int32)">
+            <summary>
+            Left mouse button drag.
+            </summary>
+            <param name="from">From point.</param>
+            <param name="toX">To x.</param>
+            <param name="toY">To y.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDrag(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            Left mouse button drag.
+            </summary>
+            <param name="from">From point.</param>
+            <param name="to">To point.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDragTo(System.Int32,System.Int32)">
+            <summary>
+            Right mouse button drag to a point.
+            </summary>
+            <param name="x">Target x.</param>
+            <param name="y">Target y.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDragTo(System.Drawing.Point)">
+            <summary>
+            Right mouse button dra to a point.
+            </summary>
+            <param name="point">Target.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDrag(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Right mouse button drag.
+            </summary>
+            <param name="fromX">From x.</param>
+            <param name="fromY">From y.</param>
+            <param name="toX">To x.</param>
+            <param name="toY">To y.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDrag(System.Int32,System.Int32,System.Drawing.Point)">
+            <summary>
+            Right mouse button drag.
+            </summary>
+            <param name="fromX">From x.</param>
+            <param name="fromY">From y.</param>
+            <param name="to">To point.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDrag(System.Drawing.Point,System.Int32,System.Int32)">
+            <summary>
+            Right mouse button drag.
+            </summary>
+            <param name="from">From point.</param>
+            <param name="toX">To x.</param>
+            <param name="toY">To y.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDrag(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            Right mouse button drag.
+            </summary>
+            <param name="from">From point.</param>
+            <param name="to">To point.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.MoveToWithRandomOffset(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Move mouse to a target point with random offset.
+            </summary>
+            <param name="x">Target x.</param>
+            <param name="y">Target y.</param>
+            <param name="xOffset">x offset.</param>
+            <param name="yOffset">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.MoveToWithRandomOffset(System.Int32,System.Int32)">
+            <summary>
+            Move mouse to a target point with random default offset.
+            </summary>
+            <param name="x">Target x.</param>
+            <param name="y">Target y.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.MoveToWithRandomOffset(System.Drawing.Point,System.Int32,System.Int32)">
+            <summary>
+            Move mouse to a target point with random offset.
+            </summary>
+            <param name="point">Target.</param>
+            <param name="xOffset">x offset.</param>
+            <param name="yOffset">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.MoveToWithRandomOffset(System.Drawing.Point)">
+            <summary>
+            Move mouse to a target point with random default offset.
+            </summary>
+            <param name="point">Target.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.ClickWithRandomOffset(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Click a target point with random offset.
+            </summary>
+            <param name="x">Tartget x.</param>
+            <param name="y">Target y.</param>
+            <param name="xOffset">x offset.</param>
+            <param name="yOffset">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.ClickWithRandomOffset(System.Int32,System.Int32)">
+            <summary>
+            Click a target point with random default offset.
+            </summary>
+            <param name="x">Target x.</param>
+            <param name="y">Target y.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.ClickWithRandomOffset(System.Drawing.Point,System.Int32,System.Int32)">
+            <summary>
+            Click a target point with random offset.
+            </summary>
+            <param name="point">Target.</param>
+            <param name="xOffset">x offset.</param>
+            <param name="yOffset">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.ClickWithRandomOffset(System.Drawing.Point)">
+            <summary>
+            Click a target point with random default offset.
+            </summary>
+            <param name="point">Target.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDragToWithRandomOffset(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Left mouse drag to a point with random offset.
+            </summary>
+            <param name="x">Tartet x.</param>
+            <param name="y">Target y.</param>
+            <param name="xOffset">x offset.</param>
+            <param name="yOffset">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDragToWithRandomOffset(System.Int32,System.Int32)">
+            <summary>
+            Left mouse drag to a point with random default offset.
+            </summary>
+            <param name="x">x offset.</param>
+            <param name="y">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDragToWithRandomOffset(System.Drawing.Point,System.Int32,System.Int32)">
+            <summary>
+            Left mouse drag to a point with random offset.
+            </summary>
+            <param name="point">Target.</param>
+            <param name="xOffset">x offset.</param>
+            <param name="yOffset">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDragToWithRandomOffset(System.Drawing.Point)">
+            <summary>
+            Left mouse drag to a point with random default offset.
+            </summary>
+            <param name="point">Target.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDragWithRandomOffset(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Left mouse drag with random offset.
+            </summary>
+            <param name="fromX">From x.</param>
+            <param name="fromY">From y.</param>
+            <param name="toX">To x.</param>
+            <param name="toY">To y.</param>
+            <param name="xOffset">x offset.</param>
+            <param name="yOffset">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDragWithRandomOffset(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Left mouse drag with random default offset.
+            </summary>
+            <param name="fromX">From x.</param>
+            <param name="fromY">From y.</param>
+            <param name="toX">To x.</param>
+            <param name="toY">To y.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDragWithRandomOffset(System.Drawing.Point,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Left mouse drag with random offset.
+            </summary>
+            <param name="from">From point.</param>
+            <param name="toX">To x.</param>
+            <param name="toY">To y.</param>
+            <param name="xOffset">x offset.</param>
+            <param name="yOffset">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDragWithRandomOffset(System.Drawing.Point,System.Int32,System.Int32)">
+            <summary>
+            Left mouse drag with random default offset.
+            </summary>
+            <param name="from">From point.</param>
+            <param name="toX">To x.</param>
+            <param name="toY">To y.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDragWithRandomOffset(System.Int32,System.Int32,System.Drawing.Point,System.Int32,System.Int32)">
+            <summary>
+            Left mouse drag with random offset.
+            </summary>
+            <param name="fromX">From x.</param>
+            <param name="fromY">From y.</param>
+            <param name="to">To point.</param>
+            <param name="xOffset">x offset.</param>
+            <param name="yOffset">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDragWithRandomOffset(System.Int32,System.Int32,System.Drawing.Point)">
+            <summary>
+            Left mouse drag with random default offset.
+            </summary>
+            <param name="fromX">From x.</param>
+            <param name="fromY">From y.</param>
+            <param name="to">To point.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDragWithRandomOffset(System.Drawing.Point,System.Drawing.Point,System.Int32,System.Int32)">
+            <summary>
+            Left mouse drag with random offset.
+            </summary>
+            <param name="from">From point.</param>
+            <param name="to">To point.</param>
+            <param name="xOffset">x offset.</param>
+            <param name="yOffset">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDragWithRandomOffset(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            Left mouse drag with random default offset.
+            </summary>
+            <param name="from">From point.</param>
+            <param name="to">To point.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDragToWithRandomOffset(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Right mouse drag to a point with random offset.
+            </summary>
+            <param name="x">Tartet x.</param>
+            <param name="y">Target y.</param>
+            <param name="xOffset">x offset.</param>
+            <param name="yOffset">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDragToWithRandomOffset(System.Int32,System.Int32)">
+            <summary>
+            Right mouse drag to a point with random default offset.
+            </summary>
+            <param name="x">x offset.</param>
+            <param name="y">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDragToWithRandomOffset(System.Drawing.Point,System.Int32,System.Int32)">
+            <summary>
+            Right mouse drag to a point with random offset.
+            </summary>
+            <param name="point">Target.</param>
+            <param name="xOffset">x offset.</param>
+            <param name="yOffset">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDragToWithRandomOffset(System.Drawing.Point)">
+            <summary>
+            Right mouse drag to a point with random default offset.
+            </summary>
+            <param name="point">Target.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDragWithRandomOffset(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Right mouse drag with random offset.
+            </summary>
+            <param name="fromX">From x.</param>
+            <param name="fromY">From y.</param>
+            <param name="toX">To x.</param>
+            <param name="toY">To y.</param>
+            <param name="xOffset">x offset.</param>
+            <param name="yOffset">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDragWithRandomOffset(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Right mouse drag with random default offset.
+            </summary>
+            <param name="fromX">From x.</param>
+            <param name="fromY">From y.</param>
+            <param name="toX">To x.</param>
+            <param name="toY">To y.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDragWithRandomOffset(System.Drawing.Point,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Right mouse drag with random offset.
+            </summary>
+            <param name="from">From point.</param>
+            <param name="toX">To x.</param>
+            <param name="toY">To y.</param>
+            <param name="xOffset">x offset.</param>
+            <param name="yOffset">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDragWithRandomOffset(System.Drawing.Point,System.Int32,System.Int32)">
+            <summary>
+            Right mouse drag with random default offset.
+            </summary>
+            <param name="from">From point.</param>
+            <param name="toX">To x.</param>
+            <param name="toY">To y.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDragWithRandomOffset(System.Int32,System.Int32,System.Drawing.Point,System.Int32,System.Int32)">
+            <summary>
+            Right mouse drag with random offset.
+            </summary>
+            <param name="fromX">From x.</param>
+            <param name="fromY">From y.</param>
+            <param name="to">To point.</param>
+            <param name="xOffset">x offset.</param>
+            <param name="yOffset">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDragWithRandomOffset(System.Int32,System.Int32,System.Drawing.Point)">
+            <summary>
+            Right mouse drag with random default offset.
+            </summary>
+            <param name="fromX">From x.</param>
+            <param name="fromY">From y.</param>
+            <param name="to">To point.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDragWithRandomOffset(System.Drawing.Point,System.Drawing.Point,System.Int32,System.Int32)">
+            <summary>
+            Right mouse drag with random offset.
+            </summary>
+            <param name="from">From point.</param>
+            <param name="to">To point.</param>
+            <param name="xOffset">x offset.</param>
+            <param name="yOffset">y offset.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDragWithRandomOffset(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            Right mouse drag with random default offset.
+            </summary>
+            <param name="from">From point.</param>
+            <param name="to">To point.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDrag(System.Drawing.Point[])">
+            <summary>
+            Drag through a chain of points using right mouse button.
+            (The right mouse button is pressed before the drag, and is released after the drag.
+            </summary>
+            <param name="points">The points to drag in sequence.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.RightDrag(System.Collections.Generic.List{System.Drawing.Point})">
+            <summary>
+            Drag through a chain of points using right mouse button.
+            (The right mouse button is pressed before the drag, and is released after the drag.
+            </summary>
+            <param name="points">The points to drag in sequence.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDrag(System.Drawing.Point[])">
+            <summary>
+            Drag through a chain of points using left mouse button.
+            (The left mouse button is pressed before the drag, and is released after the drag.
+            </summary>
+            <param name="points">The points to drag in sequence.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.LeftDrag(System.Collections.Generic.List{System.Drawing.Point})">
+            <summary>
+            Drag through a chain of points using left mouse button.
+            (The left mouse button is pressed before the drag, and is released after the drag.
+            </summary>
+            <param name="points">The points to drag in sequence.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.MoveTo(System.Drawing.Point[])">
+            <summary>
+            Move the mouse cursor through a chain of points.
+            </summary>
+            <param name="points">The points to move though in sequence.</param>
+        </member>
+        <member name="M:Quellatalo.Nin.TheHands.MouseHandler.MoveTo(System.Collections.Generic.List{System.Drawing.Point})">
+            <summary>
+            Move the mouse cursor through a chain of points.
+            </summary>
+            <param name="points">The points to move though in sequence.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,32 @@
+:::Jar already downloaded, launching jetty server...:::
+:::Starting jetty server...:::
+:::Making Request to Service: http://localhost:8080/sikuli/api/doubleclick POST: {"jPattern":{"imagePath":"..\\..\\..\\Images\\LogOn.PNG","offset_x":0,"offset_y":0,"similar":0.7},"jKeyModifier":"NONE"}:::
+:::{"result":"FAIL","stacktrace":"FindFailed: null\n  Line 2096, in file Region.java\n\r\n\tat org.sikuli.script.Region.wait(Region.java:2096)\r\n\tat org.sikuli.script.Region.find(Region.java:1983)\r\n\tat org.sikuli.script.Region.getLocationFromTarget(Region.java:2547)\r\n\tat org.sikuli.script.Region.doubleClick(Region.java:3063)\r\n\tat org.sikuli.script.Region.doubleClick(Region.java:3048)\r\n\tat org.sikuliapi.rest.servlets.doubleclick.doPost(doubleclick.java:40)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:647)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:728)\r\n\tat org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:671)\r\n\tat org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:448)\r\n\tat org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:211)\r\n\tat org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1070)\r\n\tat org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:375)\r\n\tat org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:175)\r\n\tat org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1004)\r\n\tat org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:136)\r\n\tat org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)\r\n\tat org.eclipse.jetty.server.Server.handle(Server.java:449)\r\n\tat org.eclipse.jetty.server.HttpChannel.run(HttpChannel.java:246)\r\n\tat org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:265)\r\n\tat org.eclipse.jetty.io.AbstractConnection$ReadCallback.run(AbstractConnection.java:240)\r\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:589)\r\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:520)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n"}:::
+:::Result: FAIL Message:  Stacktrace: FindFailed: null
+  Line 2096, in file Region.java
+
+	at org.sikuli.script.Region.wait(Region.java:2096)
+	at org.sikuli.script.Region.find(Region.java:1983)
+	at org.sikuli.script.Region.getLocationFromTarget(Region.java:2547)
+	at org.sikuli.script.Region.doubleClick(Region.java:3063)
+	at org.sikuli.script.Region.doubleClick(Region.java:3048)
+	at org.sikuliapi.rest.servlets.doubleclick.doPost(doubleclick.java:40)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:671)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:448)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:211)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1070)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:375)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:175)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1004)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:136)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:449)
+	at org.eclipse.jetty.server.HttpChannel.run(HttpChannel.java:246)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:265)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.run(AbstractConnection.java:240)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:589)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:520)
+	at java.lang.Thread.run(Unknown Source)
+:::

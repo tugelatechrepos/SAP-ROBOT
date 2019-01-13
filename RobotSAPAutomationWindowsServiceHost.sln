@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPAutomationJob", "SAPAutomationJob\SAPAutomationJob.csproj", "{D20E8BAD-B206-43BC-AE51-3E5248EBEEE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPAutomationTests", "SAPAutomationTests\SAPAutomationTests.csproj", "{96A21C4A-1708-4E25-9888-96863066769E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomationToolStrategy", "AutomationToolStrategy\AutomationToolStrategy.csproj", "{7B039102-F061-47B8-A8FC-6CD26BA23337}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseKeyboardHandler", "MouseKeyboardHandler\MouseKeyboardHandler.csproj", "{A6605D66-D6A0-426C-BC2C-3EFC6C81A1BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisionStrategy", "VisionStrategy\VisionStrategy.csproj", "{853D7421-4BAB-4766-ACDE-076EC194C692}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{0CCEBA46-F63F-44FF-AC6C-132822C7012D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{CF614A4F-CF74-4BBF-A077-3BC8D11E7046}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D20E8BAD-B206-43BC-AE51-3E5248EBEEE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20E8BAD-B206-43BC-AE51-3E5248EBEEE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20E8BAD-B206-43BC-AE51-3E5248EBEEE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20E8BAD-B206-43BC-AE51-3E5248EBEEE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96A21C4A-1708-4E25-9888-96863066769E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96A21C4A-1708-4E25-9888-96863066769E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96A21C4A-1708-4E25-9888-96863066769E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96A21C4A-1708-4E25-9888-96863066769E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B039102-F061-47B8-A8FC-6CD26BA23337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B039102-F061-47B8-A8FC-6CD26BA23337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B039102-F061-47B8-A8FC-6CD26BA23337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B039102-F061-47B8-A8FC-6CD26BA23337}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6605D66-D6A0-426C-BC2C-3EFC6C81A1BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6605D66-D6A0-426C-BC2C-3EFC6C81A1BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6605D66-D6A0-426C-BC2C-3EFC6C81A1BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6605D66-D6A0-426C-BC2C-3EFC6C81A1BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{853D7421-4BAB-4766-ACDE-076EC194C692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{853D7421-4BAB-4766-ACDE-076EC194C692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{853D7421-4BAB-4766-ACDE-076EC194C692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{853D7421-4BAB-4766-ACDE-076EC194C692}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CCEBA46-F63F-44FF-AC6C-132822C7012D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CCEBA46-F63F-44FF-AC6C-132822C7012D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CCEBA46-F63F-44FF-AC6C-132822C7012D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CCEBA46-F63F-44FF-AC6C-132822C7012D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF614A4F-CF74-4BBF-A077-3BC8D11E7046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF614A4F-CF74-4BBF-A077-3BC8D11E7046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF614A4F-CF74-4BBF-A077-3BC8D11E7046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF614A4F-CF74-4BBF-A077-3BC8D11E7046}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34AA6490-00B3-4EAF-B53C-327D76B16634}
+	EndGlobalSection
+EndGlobal

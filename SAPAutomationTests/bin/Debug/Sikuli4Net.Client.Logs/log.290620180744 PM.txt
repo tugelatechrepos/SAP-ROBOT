@@ -1,0 +1,5 @@
+:::Jar already downloaded, launching jetty server...:::
+:::Starting jetty server...:::
+:::Making Request to Service: http://localhost:8080/sikuli/api/exists POST: {"jPattern":{"imagePath":"C:\\Users\\user\\source\\repos\\RobotSAPAutomationWindowsServiceHost\\SAPAutomationTests\\bin\\Debug\\SAPLogon.PNG","offset_x":0,"offset_y":0,"similar":0.7},"timeout":10.0,"patternExists":false,"jResult":null}:::
+:::{"jResult":{"result":"PASS","message":"Pattern Exists"},"patternExists":true,"jPattern":{"similar":0.699999988079071,"imagePath":"C:\\Users\\user\\source\\repos\\RobotSAPAutomationWindowsServiceHost\\SAPAutomationTests\\bin\\Debug\\SAPLogon.PNG","offset_x":0,"offset_y":0},"timeout":10}:::
+:::Result: PASS Message: Pattern Exists Stacktrace: :::

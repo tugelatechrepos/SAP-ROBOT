@@ -1,0 +1,69 @@
+﻿Installing assembly 'C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.InstallLog
+   assemblypath = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe
+Installing service RobotSAPAutomationService...
+Service RobotSAPAutomationService has been successfully installed.
+Creating EventLog source RobotSAPAutomationService in log Application...
+Committing assembly 'C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.InstallLog
+   assemblypath = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe
+Uninstalling assembly 'C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.InstallLog
+   assemblypath = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe
+Removing EventLog source RobotSAPAutomationService.
+Service RobotSAPAutomationService is being removed from the system...
+Service RobotSAPAutomationService was successfully removed from the system.
+Installing assembly 'C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.InstallLog
+   assemblypath = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe
+Installing service RobotSAPAutomationService...
+Creating EventLog source RobotSAPAutomationService in log Application...
+Rolling back assembly 'C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.InstallLog
+   assemblypath = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe
+Restoring event log to previous state for source RobotSAPAutomationService.
+Installing assembly 'C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.InstallLog
+   assemblypath = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe
+Installing service RobotSAPAutomationService...
+Creating EventLog source RobotSAPAutomationService in log Application...
+Rolling back assembly 'C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.InstallLog
+   assemblypath = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe
+Restoring event log to previous state for source RobotSAPAutomationService.
+Uninstalling assembly 'C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.InstallLog
+   assemblypath = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe
+Removing EventLog source RobotSAPAutomationService.
+Warning: The source RobotSAPAutomationService is not registered on the local machine.
+Service RobotSAPAutomationService is being removed from the system...
+Service RobotSAPAutomationService was successfully removed from the system.
+Installing assembly 'C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.InstallLog
+   assemblypath = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe
+Installing service RobotSAPAutomationService...
+Creating EventLog source RobotSAPAutomationService in log Application...
+Rolling back assembly 'C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.InstallLog
+   assemblypath = C:\Users\user\source\repos\RobotSAPAutomationWindowsServiceHost\RobotSAPAutomationWindowsServiceHost\bin\Debug\RobotSAPAutomationWindowsServiceHost.exe
+Restoring event log to previous state for source RobotSAPAutomationService.
